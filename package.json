@@ -1,0 +1,15 @@
+{
+  "name": "datastructures",
+  "version": "1.0.0",
+  "description": "Data Structure Demos for 2202-FTB-ET-WEB-FT",
+  "main": "Queue.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon index.js"
+  },
+  "author": "Nicholas Zehr",
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
