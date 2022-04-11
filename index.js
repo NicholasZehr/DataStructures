@@ -35,15 +35,18 @@
 // console.log("IsEmpty", q.isEmpty)
 
 
-// const LinkedList = require("./SinglyLinkedList");
+//  const LinkedList = require("./DoublyLinkedList");
 
-// // Singly LinkedList 
-// const sll = new LinkedList
+//  // Singly LinkedList 
+//  const dll = new LinkedList
 
-// for (let i = 0; i < 7; i++) {
-//     sll.insert(i)
-// }
-// console.log("Singly Linked List before removal")
+// dll.insertHead(1)
+// console.log("This is one node in list", dll)
+//for (let i = 1; i < 6; i++) {
+    //sll.insertTail(i)
+    //}
+//     dll.insertHead(2)
+//  console.log("Doubly Linked with two nodes", dll)
 // console.log("The head is:", sll.head)
 // console.log("The tail is:", sll.tail)
 // sll.print()
@@ -54,15 +57,32 @@
 // sll.print()
 
 //BigKitten
-const BigKitten = require("./BigKitten")
+//const BigKitten = require("./BigKitten")
 
-const lion = new BigKitten(false, "big", "Rawr")
-const cheetah = new BigKitten(true, "small", "Meow")
+// const lion = new BigKitten(false, "big", "Rawr")
+// const cheetah = new BigKitten(true, "small", "Meow")
 
-lion.makeNoise()
-console.log("Lion tail is", lion.tail)
-console.log(lion.legs)
-lion.setLegs = 3
-console.log(lion.legs)
-cheetah.makeNoise()
-console.log("Cheetah tail is", cheetah.tail)
+// lion.makeNoise()
+// console.log("Lion tail is", lion.tail)
+// console.log(lion.legs)
+// lion.setLegs = 3
+// console.log(lion.legs)
+// cheetah.makeNoise()
+// console.log("Cheetah tail is", cheetah.tail)
+
+// Binary Seerch Tree
+const BinarySearchTree = require("./BinarySearchTree")
+
+const bst = new BinarySearchTree
+
+console.log("Initial bst:", bst)
+bst.insert(7)
+console.log("BST after 7:", bst)
+bst.insert(3)
+console.log("BST after 3:", bst)
+bst.insert(8)
+console.log("BST after 8:", bst)
+bst.insert(6)
+console.log("BST after 6:", bst.root.left)
+bst.insert(3)
+console.log("BST after 6:", bst.root.left)
