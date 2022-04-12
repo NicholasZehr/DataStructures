@@ -1,3 +1,9 @@
+// The Queue class allows us to store the object full of elements that we have 
+// put in the queue. We are also able to keep track of the index for the next
+// head and the tail.  We also have access to a copy of these methods when we 
+// instantiate each Queue using the keyword new. The methods we have used in
+// this class are enqueue, dequeue, peek. We also have access to the instance 
+// properties via the get methods which are length and isEmpty. 
 class Queue {
     constructor() {
       this.elements = {};
