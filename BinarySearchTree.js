@@ -1,4 +1,6 @@
+// This Node class allows us to store a value for the Node itself as well as a  reference to the location in memory to the left and right nodes that may be present. If they do not exist then we store null in the Node's left and right.
 class Node {
+// The value passed in here is the value of the new node when it is created.
     constructor(value) {
         this.value = value
         this.left = null
@@ -7,6 +9,9 @@ class Node {
 }
 
 class BinarySearchTree {
+// The root is a reference to the place in memory where the starting node 
+// is located. When the new BinarySearchTree is initialized the root will
+// be null.
     constructor() {
         this.root = null
     }
