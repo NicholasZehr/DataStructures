@@ -1,3 +1,4 @@
+// This Node class allows us to store a value for the Node itself as well as a  reference to the location in memory to the next and previous nodes that may be present. If that node does not exist then we store null in the Node's next and or prev. Null will be the default for next and prev when we add a new node then we will update the next and prev references based on which end of the DLL we add the node to. 
 class Node {
     constructor(value) {
       this.value = value;
@@ -5,14 +6,16 @@ class Node {
       this.prev = null
     }
   }
-  
-class LinkedList {
-    constructor() {
-      this.head = null;
-      this.tail = null;
-      this.length = 0;
-    }
-    insertTail(value) {
+
+// The DoublyLinkedList (DLL) class allows us to store the reference to the place in memory where the head of the list resides as well as where the tail resides. We are also keeping track of the length in this implementation of LinkedList. We also have access to a copy of these methods when we instantiate each LinkedList using the keyword new. The methods we have implemented in this class are insertTail, insertHead, remove and print. 
+class DoublyLinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+  // insertTail places a newly created node at the end of the DLL
+  insertTail(value) {
         this.length++;
         let newNode = new Node(value);
       
@@ -25,7 +28,8 @@ class LinkedList {
       
         this.head = this.tail = newNode;
         return newNode;
-    }
+  }
+  // insertTail places a newly created node at the beginning of the DLL
   insertHead(value) {
     this.length++;
     let newNode = new Node(value)
@@ -37,14 +41,15 @@ class LinkedList {
     }
     this.head = this.tail = newNode
     return newNode
-    }
-    remove() {
-        //if there is a tail do this section
-        if (this.tail) {
-          this.length--;
-      
-          const tailNode = this.tail;
-            //Start from beginning
+  }
+  // insertTail removes the tail at the end of the DLL
+  remove() {
+      //if there is a tail do this section
+      if (this.tail) {
+        this.length--;
+  
+        const tailNode = this.tail;
+          //Start from beginning
           let currentNode = this.head;
       
             //Need this loop since you can only transit
@@ -62,15 +67,15 @@ class LinkedList {
         }
         //if there is no tail return undefined
         return undefined;
-    }
-    print() {
+  }
+  print() {
         //just print all of the nodes.
         let current = this.head;
         while (current) {
           console.log(current.value, ", ");
           current = current.next;
         }
-      }
+  }
 }
   
-module.exports = LinkedList
+module.exports = DoublyLinkedList
